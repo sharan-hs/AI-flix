@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="pt-[60%] px-6 lg:pt-[20%] lg:px-24 absolute text-white bg-gradient-to-r from-black w-screen aspect-video">
+    <div className="pt-[60%] px-6 lg:pt-[20%] lg:px-24 absolute text-offwhite bg-gradient-to-r from-black w-[95vw] aspect-video">
       <h1 className="-m-6 ml-2 lg:ml-0 lg:m-0 text-lg lg:text-6xl font-bold">
         {title}
       </h1>
@@ -18,7 +18,7 @@ const VideoTitle = ({ title, overview }) => {
             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
           </svg>
 
-          <button className="bg-white text-black py-1 px-5 mt-0 text-sm lg:p-4 lg:px-16 lg:text-lg rounded-lg hover:bg-opacity-80">
+          <button className="btn-secondary text-black py-1 px-5 mt-0 text-sm lg:p-4 lg:px-16 lg:text-lg rounded-lg hover:bg-opacity-80">
             Play Now
           </button>
         </div>

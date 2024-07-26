@@ -1,9 +1,6 @@
 export const LOGO =
   "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 
-export const CHEVRON_DOWN =
-  "https://cdn-icons-png.flaticon.com/128/9126/9126125.png";
-
 export const USER_PIC =
   "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg";
 
@@ -18,9 +15,6 @@ export const TOP_RATED_MOVIES_LIST =
 
 export const UPCOMING_MOVIES_LIST =
   "https://api.themoviedb.org/3/movie/upcoming?page=1";
-
-export const TV_SERIES_LIST =
-  "https://api.themoviedb.org/3/tv/on_the_air?page=1";
 
 export const NETFLIX_BACKGROUND_IMG =
   "https://assets.nflxext.com/ffe/siteui/vlv3/1fd8c6d0-20db-4667-860e-dd1ad7353ac0/10f8d166-7c8c-499a-b16f-57c3740cdeae/IN-en-20240624-popsignuptwoweeks-perspective_alpha_website_medium.jpg";

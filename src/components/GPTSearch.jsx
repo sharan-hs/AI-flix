@@ -6,7 +6,7 @@ import { NETFLIX_BACKGROUND_IMG } from "../utils/constants";
 const GPTSearch = () => {
   return (
     <div>
-      <div className="fixed -z-20">
+      <div className="fixed opacity-90 -z-20">
         <img
           className="h-screen object-cover lg:h-full"
           src={NETFLIX_BACKGROUND_IMG}

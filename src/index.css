@@ -16,3 +16,20 @@
 .btn-color {
   background-color: #e50914;
 }
+
+.btn-secondary{
+  background-color: antiquewhite;
+}
+
+.text-offwhite{
+  color: antiquewhite;
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none; /*Chrome*/
+}
+
+.no-scrollbar{
+  -ms-overflow-style: none; /*IE and Edge*/
+  scrollbar-width: none; /*Firefox*/
+}

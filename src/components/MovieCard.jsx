@@ -12,10 +12,9 @@ const MovieCard = ({ movieInfo, posterPath }) => {
     <>
       <div
         onClick={() => {
-          console.log(movieInfo);
           setShowModal(!showModal);
         }}
-        className="w-56 lg:w-48"
+        className="w-56 lg:w-48 hover:cursor-pointer"
       >
         <img src={IMG_CDN_URL + posterPath} alt="Movie card" />
       </div>

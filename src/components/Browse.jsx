@@ -9,7 +9,7 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
-import useTvSeries from "../hooks/useTvSeries";
+
 import GPTSearch from "./GPTSearch";
 
 const Browse = () => {
@@ -17,7 +17,6 @@ const Browse = () => {
   usePopularMovies();
   useTopRatedMovies();
   useUpcomingMovies();
-  useTvSeries();
 
   const showGPTSearch = useSelector((store) => store.gpt.gptSearchView);
 

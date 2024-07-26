@@ -1,11 +1,15 @@
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { CHEVRON_DOWN, LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
-import { clearGPTResults, toggleGptView } from "../utils/gptSlice";
+import {
+  clearGPTResults,
+  homePageView,
+  toggleGptView,
+} from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
@@ -37,7 +41,7 @@ const Header = () => {
             email: email,
             displayName: displayName,
             photoURL: photoURL,
-          }),
+          })
         );
         navigate("/browse");
       } else {
@@ -57,10 +61,18 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   };
 
+  const homePageHandler = () => {
+    dispatch(homePageView());
+  };
+
   return (
-    <div className="absolute w-full z-20 flex flex-row justify-between items-center">
+    <div className="absolute w-full z-20 flex flex-row justify-between">
       <div>
-        <img className="w-24 ml-5 lg:w-48 font-extrabold my-3" src={LOGO} />
+        <img
+          onClick={homePageHandler}
+          className="w-24 ml-5 lg:w-48 cursor-pointer font-extrabold my-3"
+          src={LOGO}
+        />
       </div>
       {user && (
         <div className="my-2 lg:p-4 mx-4 lg:my-8 ">
@@ -68,7 +80,7 @@ const Header = () => {
             {gptSearchValue && (
               <select
                 onChange={languageHandler}
-                className="p-2 bg-blue-950 text-white rounded-lg"
+                className="p-2 lg:py-2 lg:px-4 btn-secondary text-black font-semibold rounded-lg"
               >
                 {SUPPORTED_LANGUAGES.map((lang) => (
                   <option key={lang.identifier} value={lang.identifier}>
@@ -77,17 +89,18 @@ const Header = () => {
                 ))}
               </select>
             )}
-            <button
-              onClick={handleGPTSearchClick}
-              className="px-2 py-1 lg:px-4 lg:py-2 bg-purple-500 text-white rounded-lg"
-            >
-              {gptSearchValue ? "Home" : "GPT Search"}
-            </button>
-            <img className="w-5 h-5 lg:w-10 lg:h-10" src={user.photoURL} />
+            {!gptSearchValue && (
+              <button
+                onClick={handleGPTSearchClick}
+                className="px-2 py-1 lg:px-4 lg:py-2 btn-secondary font-semibold text-black rounded-lg"
+              >
+                GPT Search
+              </button>
+            )}
             <img
               onClick={() => setShowSignout(!showSignout)}
-              className="w-6 h-6 cursor-pointer"
-              src={CHEVRON_DOWN}
+              className="w-5 h-5 lg:w-10 lg:h-10 hover:cursor-pointer"
+              src={user.photoURL}
             />
           </div>
           {showSignout && (
