@@ -1,10 +1,10 @@
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../utils/firebase";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { CHEVRON_DOWN, LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import {
   clearGPTResults,
   homePageView,
@@ -72,6 +72,7 @@ const Header = () => {
           onClick={homePageHandler}
           className="w-24 ml-5 lg:w-48 cursor-pointer font-extrabold my-3"
           src={LOGO}
+          alt="logoIcon"
         />
       </div>
       {user && (
@@ -101,6 +102,7 @@ const Header = () => {
               onClick={() => setShowSignout(!showSignout)}
               className="w-5 h-5 lg:w-10 lg:h-10 hover:cursor-pointer"
               src={user.photoURL}
+              alt="userImageIcon"
             />
           </div>
           {showSignout && (

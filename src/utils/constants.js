@@ -19,8 +19,6 @@ export const UPCOMING_MOVIES_LIST =
 export const NETFLIX_BACKGROUND_IMG =
   "https://assets.nflxext.com/ffe/siteui/vlv3/1fd8c6d0-20db-4667-860e-dd1ad7353ac0/10f8d166-7c8c-499a-b16f-57c3740cdeae/IN-en-20240624-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
 
-export const API_KEY = "7bb5b8cc00645c037563041aa1be4ba6";
-
 export const API_TOKEN =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YmI1YjhjYzAwNjQ1YzAzNzU2MzA0MWFhMWJlNGJhNiIsIm5iZiI6MTcyMDA3NDM1Ni4xNTU5MDgsInN1YiI6IjY2ODYzZjFkN2Y5NGM0MGZmNzRhN2NhNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gqLmXLp7KyVlU2RqqnbvHHcE3n_b8ncpovsXCErEf_g";
 

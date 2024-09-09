@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "./Header";
-import { API_OPTIONS, NOW_PLAYING_LIST } from "../utils/constants";
-import { useDispatch, useSelector } from "react-redux";
-import { addNowPLayingMovies } from "../utils/moviesSlice";
+import { useSelector } from "react-redux";
+
 import useNowPlaying from "../hooks/useNowPlaying";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";

@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  API_OPTIONS,
-  SEARCH_MOVIE_API,
-  SUPPORTED_LANGUAGES,
-} from "../utils/constants";
+import { API_OPTIONS } from "../utils/constants";
 import lang from "../utils/langConstants";
 import genAI from "../utils/gemini";
 import { addGPTMovies } from "../utils/gptSlice";
@@ -17,7 +13,7 @@ const GPTSearchBar = () => {
   const fetchIMDBMovies = async (movieName) => {
     const movies = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${movieName}&include_adult=false&language=en-US&page=1`,
-      API_OPTIONS,
+      API_OPTIONS
     );
     const json = await movies.json();
     return json.results;
@@ -31,6 +27,7 @@ const GPTSearchBar = () => {
 
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     const result = await model.generateContent(searchQuery);
+
     const response = await result.response;
     const gptMoviesList = response.text().split(", ");
 
@@ -38,7 +35,7 @@ const GPTSearchBar = () => {
     const tmdbResults = await Promise.all(promiseArray);
 
     dispatch(
-      addGPTMovies({ movieNames: gptMoviesList, movieResults: tmdbResults }),
+      addGPTMovies({ movieNames: gptMoviesList, movieResults: tmdbResults })
     );
   };
 

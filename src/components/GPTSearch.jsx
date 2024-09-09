@@ -10,6 +10,7 @@ const GPTSearch = () => {
         <img
           className="h-screen object-cover lg:h-full"
           src={NETFLIX_BACKGROUND_IMG}
+          alt="backgroundImage"
         />
       </div>
       <GPTSearchBar />

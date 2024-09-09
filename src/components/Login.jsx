@@ -3,7 +3,6 @@ import Header from "./Header";
 import { validate, validateName } from "../utils/Validate";
 import { auth } from "../utils/firebase";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
@@ -28,14 +27,14 @@ const Login = () => {
       msg = validateName(
         fullName.current.value,
         email.current.value,
-        password.current.value,
+        password.current.value
       );
       if (msg !== null) setErrorMsg(msg);
       else {
         createUserWithEmailAndPassword(
           auth,
           email.current.value,
-          password.current.value,
+          password.current.value
         )
           .then((userCredential) => {
             // Signed up
@@ -54,7 +53,7 @@ const Login = () => {
                     email: email,
                     displayName: displayName,
                     photoURL: photoURL,
-                  }),
+                  })
                 );
               })
               .catch((error) => {
@@ -75,7 +74,7 @@ const Login = () => {
         signInWithEmailAndPassword(
           auth,
           email.current.value,
-          password.current.value,
+          password.current.value
         )
           .then((userCredential) => {
             // Signed in
@@ -99,6 +98,7 @@ const Login = () => {
           <img
             className="h-screen object-cover lg:h-auto"
             src={NETFLIX_BACKGROUND_IMG}
+            alt="netflixBackgroundImage"
           />
         </div>
         <form
