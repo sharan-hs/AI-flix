@@ -2,19 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.grad{
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(0, 0, 0) 100%);
+.grad {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0) 100%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 0.5;
-
 }
 
-.btn-color{
+.btn-color {
   background-color: #e50914;
 }
 
+.btn-secondary{
+  background-color: antiquewhite;
+}
+
+.text-offwhite{
+  color: antiquewhite;
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none; /*Chrome*/
+}
+
+.no-scrollbar{
+  -ms-overflow-style: none; /*IE and Edge*/
+  scrollbar-width: none; /*Firefox*/
+}

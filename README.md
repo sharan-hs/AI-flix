@@ -1,2 +1,3 @@
 # gemini-flix
-Netflix and Gemini 
+
+Netflix and Gemini

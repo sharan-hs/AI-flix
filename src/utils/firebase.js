@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,7 +15,7 @@ const firebaseConfig = {
   storageBucket: "sharanflix-gpt.appspot.com",
   messagingSenderId: "685538594203",
   appId: "1:685538594203:web:e267c18b223e3bf125253e",
-  measurementId: "G-H21J74E88K"
+  measurementId: "G-H21J74E88K",
 };
 
 // Initialize Firebase
